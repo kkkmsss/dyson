@@ -1,0 +1,41 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.phot {
+    position: relative;
+    height: 400px;  // 任意の縦幅を指定
+    width: 1300px; //  任意の横幅を指定
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 9s infinite;
+    opacity: 0;
+}
+
+.slideshow-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slideshow-image:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.slideshow-image:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes slideshow {
+    0%    {opacity: 0; }
+    11.1% {opacity: 1; }
+    33.3% {opacity: 1; }
+    44.4% {opacity: 0; }
+    100%  {opacity: 0; }
+}

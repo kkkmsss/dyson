@@ -1,0 +1,194 @@
+
+
+.kensakupage{
+    font-size:30px;
+    margin-left:20px;
+    margin-top:150px;
+}
+
+#search{
+    width: 75%;
+    height: 60px;           /* 高さ */
+    margin-left:110px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #999;
+    padding: 0% 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top:30px;
+}
+
+.youso-info{
+    flex: 1; /* 左半分の幅を調整 */
+    padding: 10px;
+}
+
+.mnc{
+    display: inline-block;
+    width: 95%;
+}
+
+.star{
+    flex: 1; /* 左半分の幅を調整 */
+    padding: 10px;
+}
+
+.star h2{
+}
+
+.star-rating-front{
+    font-size: 15px;
+}
+
+.star-rating-back{
+    font-size: 15px;
+}
+
+.star h3{
+    width:40%;
+}
+
+.tagukensaku{
+    font-size:25px;
+    margin-top:30px;
+    margin-right:160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tag_id{
+    margin-left: 20px;
+}
+
+.kensakucontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toukouzentai{
+    
+    flex: 1 0 calc(33.33% - 20px); /* 幅を均等に分割し、余白を考慮 */
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.clean_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    margin: 30px;
+}
+.name_field{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.post_form{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.post_form input[type='radio']{
+    display: none;
+    margin-top:200px;
+}
+.post_form label{
+    position: relative;
+    padding: 10px 10px 0;
+    color: gray;
+    cursor: pointer;
+    font-size: 30px; /*星の大きさを変更するときはここ*/
+}
+.post_form label .text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+    color: gray;
+}
+.post_form label:hover,
+    .post_form label:hover ~ label,
+    .post_form input[type='radio']:checked ~ label{
+    color: #ffcc00;
+}
+
+/*　以下一覧ページの星用のCSS　*/
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 1em;
+    font-size: 25px;
+}
+.star-rating-front {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffcc33;
+}
+.star-rating-back {
+    display: inline-block;
+    color: #ccc;
+}
+
+.sakujobutton{
+    position: absolute;
+    left: 20px;
+}
+
+.kontena p{
+    font-size: 18px;
+}
+
+.kontena{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.aaa{
+    border: 2px double black;
+    width:450px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.post{
+    display: flex;
+}
+
+.youso-info h2{
+    padding:0px, 10px;
+}
+
+.post-tag{
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.kensaku-kuwasiku{
+    margin-top:20px;
+}
+
+.kensaku-like{
+    margin-top:10px;
+}
+
+/* 'margin:20px; padding-bottom:20px; margin-top:220px; border:2px double black; width:500px;padding-left:20px;he' */
+

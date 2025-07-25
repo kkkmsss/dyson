@@ -1,0 +1,127 @@
+<div class="newzentai">
+    <div class="newnoue">
+        <h1>新規投稿ページ</h1>
+    </div>
+
+    
+
+    <%= form_for @clean do |f| %>
+        <div class="field">
+            <%= f.label :メーカー名  %>
+            <%= f.select :maker, 
+            [["Dyson", "dyson(ダイソン)"], 
+            ["Shark", "Shark(シャーク)"], 
+            ["HITACHI", "HITACHI(日立)"],
+            ["Panasonic", "Panasonic(パナソニック)"], 
+            ["SHARP", "SHARP(シャープ)"],
+            ["Electrolux", "Electrolux(エレクトロラックス)"],
+            ["マキタ", "マキタ"],
+            ["MITSUBISHI", "MITSUBISHI(三菱)"],
+            ["アイリスオーヤマ", "アイリスオーヤマ"],
+            ["TOSHIBA", "TOSHIBA(東芝)"]], include_blank: "選択して下さい" %>
+        </div>
+        
+        <div class="field">
+            <%= f.label :ジャンルを選択  %>
+            <%= f.select :genre, 
+            [["サイクロン式", "サイクロン式"], 
+            ["紙パック式", "紙パック式"], 
+            ["クリーンベース式", "クリーンベース式"],], include_blank: "選択して下さい" %>
+        </div>
+
+        <div class="field">
+            <%= f.label :型番を入力  %>
+            <%= f.text_field :name, :size => 30 %>
+        </div>
+        <div class="field">
+            <%= f.label :製品に関する詳細を入力  %>
+            <%= f.text_area :about %>
+        </div>
+        <h5>タグを選択:</h5>
+        <div class='form-group'>
+            <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "タグを選択してください"  %>
+        </div>
+        <div class="field">
+            <%= f.label :価格  %>
+            <%= f.text_field :cost, :size => 30 %>
+        </div>
+
+        <div class="field">
+            <%= f.label :画像をアップロード %>
+            <%= f.file_field :image %>
+        </div>
+
+        <h5>総合評価</h5>
+        <div class="post_form">
+            <%= f.radio_button :overall, 5 ,id: 'star1'%>
+            <label for="star1"><span class="text">最高</span>★</label>
+
+            <%= f.radio_button :overall, 4 ,id: 'star2'%>
+            <label for="star2"><span class="text">良い</span>★</label>
+
+            <%= f.radio_button :overall, 3 ,id: 'star3'%>
+            <label for="star3"><span class="text">普通</span>★</label>
+
+            <%= f.radio_button :overall, 2 ,id: 'star4'%>
+            <label for="star4"><span class="text">悪い</span>★</label>
+
+            <%= f.radio_button :overall, 1 ,id: 'star5'%>
+            <label for="star5"><span class="text">最悪</span>★</label>
+        </div>
+
+        <h5>吸引力</h5>
+        <div class="post_form">
+            <%= f.radio_button :power,  5 ,id: 'star6'%>
+            <label for="star6"><span class="text">かなり強い</span>★</label>
+
+            <%= f.radio_button :power,  4 ,id: 'star7'%>
+            <label for="star7"><span class="text">強い</span>★</label>
+
+            <%= f.radio_button :power, 3 ,id: 'star8'%>
+            <label for="star8"><span class="text">普通</span>★</label>
+
+            <%= f.radio_button :power, 2 ,id: 'star9'%>
+            <label for="star9"><span class="text">弱い</span>★</label>
+
+            <%= f.radio_button :power, 1 ,id: 'star10'%>
+            <label for="star10"><span class="text">かなり弱い</span>★</label>
+        </div>
+
+        <h5>持続力</h5>
+        <div class="post_form">
+            <%= f.radio_button :time, 5 ,id: 'star11'%>
+            <label for="star11"><span class="text">かなり長い</span>★</label>
+
+            <%= f.radio_button :time, 4 ,id: 'star12'%>
+            <label for="star12"><span class="text">長い</span>★</label>
+
+            <%= f.radio_button :time, 3 ,id: 'star13'%>
+            <label for="star13"><span class="text">普通</span>★</label>
+
+            <%= f.radio_button :time, 2 ,id: 'star14'%>
+            <label for="star14"><span class="text">短い</span>★</label>
+
+            <%= f.radio_button :time, 1 ,id: 'star15'%>
+            <label for="star15"><span class="text">かなり短い</span>★</label>
+        </div>
+
+        <h5>手入れのしやすさ</h5>
+        <div class="post_form">
+            <%= f.radio_button :care,  5 ,id: 'star16'%>
+            <label for="star16"><span class="text">超簡単</span>★</label>
+
+            <%= f.radio_button :care,  4 ,id: 'star17'%>
+            <label for="star17"><span class="text">簡単</span>★</label>
+
+            <%= f.radio_button :care, 3 ,id: 'star18'%>
+            <label for="star18"><span class="text">普通</span>★</label>
+
+            <%= f.radio_button :care, 2 ,id: 'star19'%>
+            <label for="star19"><span class="text">大変</span>★</label>
+
+            <%= f.radio_button :care, 1 ,id: 'star20'%>
+            <label for="star20"><span class="text">超大変</span>★</label>
+        </div>
+        <%= f.submit "投稿する" %>
+    <% end %>
+</div>

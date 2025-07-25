@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Dyson</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <script src="https://kit.fontawesome.com/c1b1cd6975.js" crossorigin="anonymous"></script>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    
+    <body>
+      <header>
+        <div class="home">
+
+          <%= link_to cleans_path do %>
+            <%= image_tag 'rogooo.png', alt: "Clean仮", class: "rogo" %>
+          <%end%>
+        </div>
+
+        <div class="header-list">
+          <div class="sindan">
+            <h1><%= link_to "掃除機診断をしてみる", cleans_sindan_path %></h1>
+          </div>
+          <div class="new">
+            <h1><% if user_signed_in? && current_user.id == 1 %>
+              <%= link_to "新規投稿へ", new_clean_path %>
+            <%end%></h1>
+          </div>
+        </div>
+        
+        <div class="migi">
+          <div class="kensaku">
+            <h1><%= link_to cleans_kensaku_path, class: "btn btn btn-secondary text-white", method: :get do %>
+              <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+            <%end%></h1>
+          </div>
+          <div class="mypage">
+            <h1>
+              <% if user_signed_in? %>
+                <%= link_to user_path(current_user.id), class: "btn btn btn-secondary text-white", method: :get do %>
+                  <i class="fa-solid fa-user" style="color: #FFFFFF;"></i>
+                <% end %>
+              <% else %>
+                <%= link_to new_user_registration_path, class: "btn btn btn-secondary text-white", method: :get do %>
+                  <i class="fa-solid fa-user" style="color: #FFFFFF;"></i>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+          </ul>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+    </body>
+  </html>

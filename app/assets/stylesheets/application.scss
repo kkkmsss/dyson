@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.body {
+    padding-top: 90px;
+}
+
+header {
+    text-align: right;
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    font-weight: bold;
+    position: fixed;
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0;
+    display: flex;
+    z-index: 99;
+}  
+
+.migi{
+    font-size:30px;
+    display:flex;
+    text-align: right;
+    margin-left:40%;
+    .kensaku{
+        margin-top:20px;
+        width: 100px;
+        height: 100px;
+        .fa-light fa-magnifying-glass{
+            font-size:200px;
+        }
+    }
+    .mypage {
+        margin-top:20px;
+        width: 100px;
+        height: 100px;
+        .btn btn btn-secondary text-white{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+
+header a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 25px;
+}
+header h1 {
+    color: white;
+    margin-left: 20px;
+}
+.header-list {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+header ul {
+    display: flex;
+}
+
+.maipeji{
+    margin-top:130px;
+}
+
+
+
+.maipejinotaitoru{
+    font-size:40px;
+    display: flex;
+    justify-content: center; 
+}
+
+.second-block-mypage{
+    margin-top:30px;
+    padding-top:100px;
+    background-color:#000;
+    padding-bottom:50px;
+    background: linear-gradient(45deg, #021579, #000, #1D0560);
+}
+
+
+
+
+.yuzaname{
+    font-size:50px;
+    display: flex;
+    justify-content: center; /* 水平方向中央揃え */
+    align-items: center; /* 垂直方向中央揃え */ 
+    color:#fff;
+}
+.yuzaname2{
+    font-size:50px;
+    display: flex;
+    justify-content: center; /* 水平方向中央揃え */
+    align-items: center; /* 垂直方向中央揃え */ 
+    color:#fff;
+}
+
+
+.hennsyuuroguoutiine{
+    display: flex;
+    margin-top:250px;
+    font-size:25px;
+}
+
+.box {
+    flex: 1;
+    padding: 10px;
+}
+
+.item {
+    width: calc(25% - 10px); /* 要素の幅を均等に設定（マージンの分を引く） */
+    margin: 0 5px; /* 要素の間にスペースを追加 */
+    color: white;
+    text-align:center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size:60px;
+}
+
+.item p{
+    font-size:30px;
+}
+
+.rogo{
+    width:4vw;
+}
+
+.kensaku :hover {
+    color: goldenrod;
+    transform: translateY(-7px);
+}
+
+.kensaku h1 :hover{
+    color: goldenrod;
+}
+
+.mypage:hover {
+    color: goldenrod;
+    transform: translateY(-7px);
+}
