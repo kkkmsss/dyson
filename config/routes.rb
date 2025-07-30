@@ -16,7 +16,3 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :iine]
   root 'cleans#index'
 end
-
-
-
-
